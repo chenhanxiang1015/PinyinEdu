@@ -5,28 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数智时代幼儿拼音教育平台</title>
     <style>
-        /* 基础样式：融合两份代码的美观性，兼顾幼儿视觉和可读性 */
         body {
             font-family: "Microsoft YaHei", sans-serif;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
-            color: #333;
         }
-
-        /* 头部样式：醒目柔和，居中展示 */
         .header {
             text-align: center;
             color: #3366cc;
             margin-bottom: 40px;
         }
-
-        .header h1 {
-            margin-bottom: 10px;
-        }
-
-        /* 通用模块样式：卡片化设计，统一视觉 */
         .resource-section {
             background-color: white;
             padding: 30px;
@@ -34,24 +24,18 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 30px;
         }
-
-        /* 模块标题：左侧标蓝，层次分明 */
         .section-title {
             color: #2c3e50;
             border-left: 4px solid #3366cc;
             padding-left: 15px;
             margin-bottom: 20px;
         }
-
-        /* 练习卡片：细分内容，整洁清晰 */
         .practice-card {
             border: 1px solid #eee;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
-
-        /* AIGC提示框：浅蓝背景，突出提示 */
         .aigc-tip {
             color: #3366cc;
             font-size: 0.9em;
@@ -60,14 +44,10 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-
-        /* 测验题目样式：行距适中，便于阅读 */
         .quiz-item {
             margin-bottom: 15px;
             line-height: 1.6;
         }
-
-        /* 通用按钮：hover过渡，交互友好 */
         .btn {
             display: inline-block;
             background-color: #3366cc;
@@ -79,92 +59,39 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
-            font-size: 16px;
         }
-
         .btn:hover {
             background-color: #2855aa;
-        }
-
-        /* 功能按钮细分：保留彩色视觉，贴合幼儿审美 */
-        .btn-video {
-            background-color: #4169e1;
-        }
-
-        .btn-video:hover {
-            background-color: #3058c9;
-        }
-
-        .btn-practice {
-            background-color: #32cd32;
-        }
-
-        .btn-practice:hover {
-            background-color: #28b428;
-        }
-
-        .btn-material {
-            background-color: #ff8c00;
-        }
-
-        .btn-material:hover {
-            background-color: #e07c00;
-        }
-
-        /* 练习区域：默认隐藏，点击显示 */
-        .practice-area {
-            margin-top: 15px;
-            padding: 15px;
-            border: 1px dashed #ccc;
-            border-radius: 5px;
-            display: none;
-        }
-
-        /* 素材提示：默认隐藏，自动消失 */
-        .material-tips {
-            color: #ff4500;
-            font-weight: bold;
-            margin-top: 10px;
-            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- 页面头部：融合两份代码的标题设计 -->
+    <!-- 页面头部 -->
     <div class="header">
         <h1>数智时代幼儿拼音教育平台</h1>
-        <p>整合优质资源，助力幼儿拼音启蒙</p>
+        <p>整合优质资源，助力幼儿拼音启蒙</p >
     </div>
 
-    <!-- 拼音教学视频资源区：融合跳转功能和提示信息 -->
+    <!-- 拼音教学视频资源区 -->
     <div class="resource-section">
         <h2 class="section-title">拼音教学视频资源</h2>
         <div class="video-container">
-            <button class="btn btn-video" id="videoBtn">点击观看钉钉云盘拼音教学视频</button>
-            <p>视频涵盖拼音读写、发音练习等幼儿启蒙内容，建议家长陪同学习</p>
+            <a href=" " target="_blank" class="btn">
+                点击观看钉钉云盘拼音教学视频
+            </a >
+            <p>视频涵盖拼音读写、发音练习等幼儿启蒙内容，建议家长陪同学习</p >
         </div>
     </div>
 
-    <!-- 拼音练习模块：融合互动练习和分级练习卡片 -->
+    <!-- 拼音练习区 -->
     <div class="resource-section">
         <h2 class="section-title">拼音练习模块</h2>
-        <!-- 互动练习开关 -->
-        <button class="btn btn-practice" id="practiceBtn">启动拼音互动练习</button>
-        <!-- 即时互动练习区（来自第一份代码） -->
-        <div class="practice-area" id="practiceArea">
-            <p>📝 即时练习：请在下方输入框中填写对应的拼音韵母</p>
-            <p>b + ___ = ba → <input type="text" id="input1" placeholder="输入韵母"> <button onclick="checkAnswer('input1', 'a')" class="btn">提交答案</button></p>
-            <p>p + ___ = po → <input type="text" id="input2" placeholder="输入韵母"> <button onclick="checkAnswer('input2', 'o')" class="btn">提交答案</button></p>
-            <p>f + ___ = fu → <input type="text" id="input3" placeholder="输入韵母"> <button onclick="checkAnswer('input3', 'u')" class="btn">提交答案</button></p>
-            <p id="answerTips"></p>
-        </div>
 
-        <!-- 分级练习卡片（来自第二份代码，优化精炼） -->
         <!-- 单韵母读写练习 -->
         <div class="practice-card">
             <h3>1. 单韵母读写练习</h3>
-            <p>练习内容：认读并书写单韵母 a、o、e、i、u、ü，各写5遍。</p>
-            <p>发音提示：注意口型和声调（一声平、二声扬、三声拐弯、四声降）。</p>
+            <p>练习内容：认读并书写单韵母 a、o、e、i、u、ü，各写5遍。</p >
+            <p>发音提示：注意口型和声调（一声平、二声扬、三声拐弯、四声降）。</p >
             <div class="aigc-tip">
                 AIGC工具辅助：用豆包AIGC生成“单韵母+卡通形象”的图片（如“a对应的苹果卡通图”），辅助记忆读写~
             </div>
@@ -173,9 +100,9 @@
         <!-- 声母与韵母组合练习 -->
         <div class="practice-card">
             <h3>2. 声母与韵母组合练习</h3>
-            <p>练习内容：完成以下声母+韵母的拼读并书写：</p>
-            <p>例：b + a = ba；p + o = po；m + e = me</p>
-            <p>练习：f + u = ____；d + i = ____；t + ü = ____</p>
+            <p>练习内容：完成以下声母+韵母的拼读并书写：</p >
+            <p>例：b + a = ba；p + o = po；m + e = me</p >
+            <p>练习：f + u = ____；d + i = ____；t + ü = ____</p >
             <div class="aigc-tip">
                 AIGC工具辅助：用豆包AIGC生成“声母+韵母组合对应的事物图”（如“ba对应的爸爸形象图”），边看图边拼读~
             </div>
@@ -184,24 +111,24 @@
         <!-- 拼音组词练习 -->
         <div class="practice-card">
             <h3>3. 拼音组词练习</h3>
-            <p>练习内容：根据拼音写出对应的词语：</p>
-            <p>例：mǎ → 马；shū → 书</p>
-            <p>练习：huā → ____；xiǎo → ____；gǒu → ____</p>
+            <p>练习内容：根据拼音写出对应的词语：</p >
+            <p>例：mǎ → 马；shū → 书</p >
+            <p>练习：huā → ____；xiǎo → ____；gǒu → ____</p >
             <div class="aigc-tip">
                 AIGC工具辅助：用豆包AIGC生成“拼音+词语+场景图”的组合素材（如“huā对应的花朵公园图”），强化词音对应~
             </div>
         </div>
     </div>
 
-    <!-- 拼音基础测验区：保留第二份代码核心，精简冗余 -->
+    <!-- 拼音测验区 -->
     <div class="resource-section">
         <h2 class="section-title">拼音基础测验</h2>
 
-        <h3>一、选择题（共5题，精炼核心考点）</h3>
+        <h3>一、选择题（共10题）</h3>
         <div class="quiz-item">1. 下列拼音中属于单韵母的是？（ ）<br>
             A. b   B. a   C. ba   D. sh
         </div>
-        <div class="quiz-item">2. “o”的二声对应的发音是？（ ）<br>
+        <div class="quiz-item">2. “o”的声调中，二声对应的发音是？（ ）<br>
             A. ō   B. ó   C. ǒ   D. ò
         </div>
         <div class="quiz-item">3. 下列属于声母的是？（ ）<br>
@@ -210,16 +137,33 @@
         <div class="quiz-item">4. “b + à”组合后的拼音是？（ ）<br>
             A. bā   B. bá   C. bǎ   D. bà
         </div>
-        <div class="quiz-item">5. 单韵母“ü”遇到声母“j”时，要去掉两点写成？（ ）<br>
+        <div class="quiz-item">5. 下列拼音对应的词语正确的是？（ ）<br>
+            A. shū → 树   B. mǎ → 妈   C. huā → 画   D. gǒu → 狗
+        </div>
+        <div class="quiz-item">6. 单韵母“ü”遇到声母“j”时，要去掉两点写成？（ ）<br>
             A. u   B. ü   C. v   D. i
         </div>
+        <div class="quiz-item">7. “d + i”组合后的拼音是？（ ）<br>
+            A. di   B. da   C. du   D. de
+        </div>
+        <div class="quiz-item">8. 下列哪个不是单韵母？（ ）<br>
+            A. a   B. o   C. e   D. b
+        </div>
+        <div class="quiz-item">9. “t + ü”组合后的拼音是？（ ）<br>
+            A. tu   B. tǔ   C. tǚ   D. tū
+        </div>
+        <div class="quiz-item">10. 拼音“xiǎo”对应的声调是？（ ）<br>
+            A. 一声   B. 二声   C. 三声   D. 四声
+        </div>
 
-        <h3>二、填空题（共3题）</h3>
+        <h3>二、填空题（共5题）</h3>
         <div class="quiz-item">1. b + à = ____</div>
         <div class="quiz-item">2. p + o = ____</div>
-        <div class="quiz-item">3. f + u = ____</div>
+        <div class="quiz-item">3. m + e = ____</div>
+        <div class="quiz-item">4. f + u = ____</div>
+        <div class="quiz-item">5. n + ǚ = ____</div>
 
-        <h3>三、连线题（共1题）</h3>
+        <h3>三、连线题（共3题）</h3>
         <div class="quiz-item">请将声母与对应的韵母连线，组成正确的拼音：<br>
             声母：b、p、m<br>
             韵母：ā、ō、é<br>
@@ -229,64 +173,12 @@
         <button class="btn">查看答案（家长辅助核对）</button>
     </div>
 
-    <!-- 豆包AIGC工具区：融合交互提示和访问入口 -->
+    <!-- 豆包AIGC工具区 -->
     <div class="resource-section">
         <h2 class="section-title">数智辅助工具：豆包AIGC</h2>
-        <button class="btn btn-material" id="materialBtn">生成拼音练习素材</button>
-        <div class="material-tips" id="materialTips">
-            素材生成中...可前往豆包AIGC平台获取定制化拼音卡片、拼读儿歌等资源哦！
-        </div>
-        <a href="#" target="_blank" class="btn" style="margin-top: 20px;">前往豆包AIGC平台</a>
+        <a href=" " target="_blank" class="btn">
+            前往豆包AIGC生成拼音练习素材
+        </a >
     </div>
-
-    <script>
-        // 1. 视频跳转功能（保留第一份代码核心，优化体验）
-        const videoBtn = document.getElementById('videoBtn');
-        videoBtn.addEventListener('click', function () {
-            window.open('https://qr.dingtalk.com/page/yunpan?route=previewDentry&spaceId=27937689586&fileId=205801265596&type=folder', '_blank');
-            alert('即将为您打开拼音教学视频，请家长陪同幼儿观看~');
-        });
-
-        // 2. 拼音互动练习显示/隐藏（保留第一份代码功能）
-        const practiceBtn = document.getElementById('practiceBtn');
-        const practiceArea = document.getElementById('practiceArea');
-        practiceBtn.addEventListener('click', function () {
-            practiceArea.style.display = practiceArea.style.display === 'none' ? 'block' : 'none';
-            this.textContent = practiceArea.style.display === 'block' ? '收起拼音互动练习' : '启动拼音互动练习';
-        });
-
-        // 3. 练习答案验证（保留第一份代码功能，优化提示样式）
-        function checkAnswer(inputId, correctAnswer) {
-            const input = document.getElementById(inputId);
-            const tips = document.getElementById('answerTips');
-            if (!input.value) {
-                tips.textContent = '⚠ 请先输入内容哦！';
-                tips.style.color = '#ff9900';
-                return;
-            }
-            if (input.value.toLowerCase() === correctAnswer) {
-                tips.textContent = '✅ 回答正确！真棒～';
-                tips.style.color = '#32cd32';
-            } else {
-                tips.textContent = '❌ 答案不对，再试试吧！';
-                tips.style.color = '#ff4500';
-            }
-            // 输入框清空
-            setTimeout(() => {
-                input.value = '';
-            }, 500);
-        }
-
-        // 4. 素材生成提示（保留第一份代码功能，稳定可靠）
-        const materialBtn = document.getElementById('materialBtn');
-        const materialTips = document.getElementById('materialTips');
-        materialBtn.addEventListener('click', function () {
-            materialTips.style.display = 'block';
-            // 5秒后自动隐藏
-            setTimeout(() => {
-                materialTips.style.display = 'none';
-            }, 5000);
-        });
-    </script>
 </body>
 </html>
