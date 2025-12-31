@@ -30,17 +30,25 @@
             padding-left: 15px;
             margin-bottom: 20px;
         }
-        .video-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+        .practice-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
-        .video-container p {
-            text-align: center;
-            margin-top: 15px;
-            color: #666;
+        .aigc-tip {
+            color: #3366cc;
+            font-size: 0.9em;
+            background-color: #f0f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
         }
-        .aigc-link {
+        .quiz-item {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .btn {
             display: inline-block;
             background-color: #3366cc;
             color: white;
@@ -48,17 +56,12 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 10px;
+            border: none;
+            cursor: pointer;
             transition: background-color 0.3s;
         }
-        .aigc-link:hover {
+        .btn:hover {
             background-color: #2855aa;
-        }
-        .dictionary-link {
-            color: #3366cc;
-            text-decoration: none;
-        }
-        .dictionary-link:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -73,29 +76,109 @@
     <div class="resource-section">
         <h2 class="section-title">拼音教学视频资源</h2>
         <div class="video-container">
-            <!-- 嵌入钉钉云盘视频链接，支持新窗口打开 -->
-            <a href=" " target="_blank" class="aigc-link">
+            <a href=" " target="_blank" class="btn">
                 点击观看钉钉云盘拼音教学视频
             </a >
             <p>视频涵盖拼音读写、发音练习等幼儿启蒙内容，建议家长陪同学习</p >
         </div>
     </div>
 
+    <!-- 拼音练习区 -->
+    <div class="resource-section">
+        <h2 class="section-title">拼音练习模块</h2>
+
+        <!-- 单韵母读写练习 -->
+        <div class="practice-card">
+            <h3>1. 单韵母读写练习</h3>
+            <p>练习内容：认读并书写单韵母 a、o、e、i、u、ü，各写5遍。</p >
+            <p>发音提示：注意口型和声调（一声平、二声扬、三声拐弯、四声降）。</p >
+            <div class="aigc-tip">
+                AIGC工具辅助：用豆包AIGC生成“单韵母+卡通形象”的图片（如“a对应的苹果卡通图”），辅助记忆读写~
+            </div>
+        </div>
+
+        <!-- 声母与韵母组合练习 -->
+        <div class="practice-card">
+            <h3>2. 声母与韵母组合练习</h3>
+            <p>练习内容：完成以下声母+韵母的拼读并书写：</p >
+            <p>例：b + a = ba；p + o = po；m + e = me</p >
+            <p>练习：f + u = ____；d + i = ____；t + ü = ____</p >
+            <div class="aigc-tip">
+                AIGC工具辅助：用豆包AIGC生成“声母+韵母组合对应的事物图”（如“ba对应的爸爸形象图”），边看图边拼读~
+            </div>
+        </div>
+
+        <!-- 拼音组词练习 -->
+        <div class="practice-card">
+            <h3>3. 拼音组词练习</h3>
+            <p>练习内容：根据拼音写出对应的词语：</p >
+            <p>例：mǎ → 马；shū → 书</p >
+            <p>练习：huā → ____；xiǎo → ____；gǒu → ____</p >
+            <div class="aigc-tip">
+                AIGC工具辅助：用豆包AIGC生成“拼音+词语+场景图”的组合素材（如“huā对应的花朵公园图”），强化词音对应~
+            </div>
+        </div>
+    </div>
+
+    <!-- 拼音测验区 -->
+    <div class="resource-section">
+        <h2 class="section-title">拼音基础测验</h2>
+
+        <h3>一、选择题（共10题）</h3>
+        <div class="quiz-item">1. 下列拼音中属于单韵母的是？（ ）<br>
+            A. b   B. a   C. ba   D. sh
+        </div>
+        <div class="quiz-item">2. “o”的声调中，二声对应的发音是？（ ）<br>
+            A. ō   B. ó   C. ǒ   D. ò
+        </div>
+        <div class="quiz-item">3. 下列属于声母的是？（ ）<br>
+            A. e   B. i   C. m   D. ü
+        </div>
+        <div class="quiz-item">4. “b + à”组合后的拼音是？（ ）<br>
+            A. bā   B. bá   C. bǎ   D. bà
+        </div>
+        <div class="quiz-item">5. 下列拼音对应的词语正确的是？（ ）<br>
+            A. shū → 树   B. mǎ → 妈   C. huā → 画   D. gǒu → 狗
+        </div>
+        <div class="quiz-item">6. 单韵母“ü”遇到声母“j”时，要去掉两点写成？（ ）<br>
+            A. u   B. ü   C. v   D. i
+        </div>
+        <div class="quiz-item">7. “d + i”组合后的拼音是？（ ）<br>
+            A. di   B. da   C. du   D. de
+        </div>
+        <div class="quiz-item">8. 下列哪个不是单韵母？（ ）<br>
+            A. a   B. o   C. e   D. b
+        </div>
+        <div class="quiz-item">9. “t + ü”组合后的拼音是？（ ）<br>
+            A. tu   B. tǔ   C. tǚ   D. tū
+        </div>
+        <div class="quiz-item">10. 拼音“xiǎo”对应的声调是？（ ）<br>
+            A. 一声   B. 二声   C. 三声   D. 四声
+        </div>
+
+        <h3>二、填空题（共5题）</h3>
+        <div class="quiz-item">1. b + à = ____</div>
+        <div class="quiz-item">2. p + o = ____</div>
+        <div class="quiz-item">3. m + e = ____</div>
+        <div class="quiz-item">4. f + u = ____</div>
+        <div class="quiz-item">5. n + ǚ = ____</div>
+
+        <h3>三、连线题（共3题）</h3>
+        <div class="quiz-item">请将声母与对应的韵母连线，组成正确的拼音：<br>
+            声母：b、p、m<br>
+            韵母：ā、ō、é<br>
+            （示例：b → ā）
+        </div>
+
+        <button class="btn">查看答案（家长辅助核对）</button>
+    </div>
+
     <!-- 豆包AIGC工具区 -->
     <div class="resource-section">
         <h2 class="section-title">数智辅助工具：豆包AIGC</h2>
-        <p>豆包AIGC可生成幼儿拼音练习素材（如拼音卡片、填字游戏、发音跟读脚本等），助力个性化学习。</p >
-        <!-- 链接豆包AIGC入口（此处以官方常用入口为例，可根据实际需求替换） -->
-        <a href="https://www.doubao.com/aigc" target="_blank" class="aigc-link">
+        <a href=" " target="_blank" class="btn">
             前往豆包AIGC生成拼音练习素材
         </a >
-    </div>
-
-    <!-- 辅助学习资源区 -->
-    <div class="resource-section">
-        <h2 class="section-title">辅助学习资源</h2>
-        <p>在线中英新华字典：<a href="https://www.xhzidian.com/english" target="_blank" class="dictionary-link">https://www.xhzidian.com/english</a >，可查询拼音对应的英文发音及词义，拓展双语认知。</p >
-        <p>作业测验模板下载：可前往课程指定平台获取 HomeworkAndTest.docx 及说明文档，完成练习后提交钉钉作业。</p >
     </div>
 </body>
 </html>
